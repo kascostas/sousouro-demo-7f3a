@@ -673,7 +673,6 @@ let start = "el";
 try{
   const saved = localStorage.getItem("sousouro-lang");
   if (saved === "el" || saved === "en") start = saved;
-  else if (navigator.language && !navigator.language.toLowerCase().startsWith("el")) start = "en";
 }catch(e){}
 setLang(start, false);
 
