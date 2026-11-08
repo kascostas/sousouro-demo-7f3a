@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sousouro Creperie · Crepes in Thessaloniki</title>
+<meta name="description" content="Sweet and savoury crepes, coffee and beer at Gounari 24, Thessaloniki. Open every day 08:00 to 02:00. Delivery and take away.">
+<link rel="canonical" href="https://kascostas.github.io/sousouro-demo-7f3a/en/">
+<link rel="alternate" hreflang="el" href="https://kascostas.github.io/sousouro-demo-7f3a/">
+<link rel="alternate" hreflang="en" href="https://kascostas.github.io/sousouro-demo-7f3a/en/">
+<link rel="alternate" hreflang="tr" href="https://kascostas.github.io/sousouro-demo-7f3a/tr/">
+<link rel="alternate" hreflang="bg" href="https://kascostas.github.io/sousouro-demo-7f3a/bg/">
+<link rel="alternate" hreflang="ro" href="https://kascostas.github.io/sousouro-demo-7f3a/ro/">
+<link rel="alternate" hreflang="sr" href="https://kascostas.github.io/sousouro-demo-7f3a/sr/">
+<link rel="alternate" hreflang="de" href="https://kascostas.github.io/sousouro-demo-7f3a/de/">
+<link rel="alternate" hreflang="it" href="https://kascostas.github.io/sousouro-demo-7f3a/it/">
+<link rel="alternate" hreflang="he" href="https://kascostas.github.io/sousouro-demo-7f3a/he/">
+<link rel="alternate" hreflang="x-default" href="https://kascostas.github.io/sousouro-demo-7f3a/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Sousouro Creperie", "servesCuisine": ["Crepes", "Coffee"], "telephone": "+30 698 748 9339", "address": {"@type": "PostalAddress", "streetAddress": "Dimitriou Gounari 24", "addressLocality": "Thessaloniki", "postalCode": "54621", "addressCountry": "GR"}, "geo": {"@type": "GeoCoordinates", "latitude": 40.629956, "longitude": 22.949881}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "08:00", "closes": "02:00"}], "hasMap": "https://www.google.com/maps/search/?api=1&query=Sousouro%20Creperie&query_place_id=ChIJrwDLhP05qBQRDC1IWSQzHgg", "sameAs": ["https://www.instagram.com/sousouro_skg/"], "priceRange": "€", "url": "https://kascostas.github.io/sousouro-demo-7f3a/"}</script>
+<link rel="icon" href="../favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;600;800;900&family=Literata:ital,opsz,wght@0,7..72,400;1,7..72,400&family=Rubik:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+/* Plan: phone first. A late-night creperie (open till 2) in the charcoal of their logo, with golden batter and strawberry accents. Base styles are the phone; wider screens are added with min-width queries. */
+:root{
+  --night:#1e1b1d;
+  --plum:#2a2628;
+  --plum-2:#3a3336;
+  --batter:#f5c35c;
+  --berry:#ff6f8e;
+  --text:#fbefe3;
+  --muted:#c8bdb6;
+  --line:rgba(251,239,227,.14);
+  --display:"Commissioner","Segoe UI",system-ui,sans-serif;
+  --body:"Literata",Georgia,"Times New Roman",serif;
+  --hdr:64px;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--night);color:var(--text);font-family:var(--display);font-size:16px;line-height:1.55;-webkit-tap-highlight-color:transparent;padding-bottom:84px}
+a{color:inherit}
+img,svg{max-width:100%}
+:focus-visible{outline:3px solid var(--batter);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.1}
+h2{font-size:30px;font-weight:900;letter-spacing:-.01em}
+.desc{font-family:var(--body);font-style:italic;color:var(--muted);font-size:15px}
+section{padding:44px 0;scroll-margin-top:var(--hdr)}
+
+/* buttons: 48px tall for thumbs */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;font-family:var(--display);font-weight:800;font-size:16px;text-decoration:none;border-radius:999px;padding:12px 22px;border:2px solid transparent;cursor:pointer}
+.btn-gold{background:var(--batter);color:var(--night)}
+.btn-gold:active,.btn-gold:hover{background:#ffd27a}
+.btn-ghost{border-color:var(--line);color:var(--text);background:transparent}
+.btn-ghost:hover{border-color:var(--batter)}
+.btn-dark{background:var(--night);color:var(--text);border-color:var(--line)}
+.btn-sm{min-height:42px;padding:9px 16px;font-size:14.5px}
+
+/* pitch ribbon */
+.pitch{background:var(--batter);color:var(--night)}
+.pitch .wrap{display:flex;gap:10px;align-items:center;justify-content:space-between;padding-top:8px;padding-bottom:8px;font-size:13.5px;font-weight:600;line-height:1.35}
+.pitch button{font:inherit;font-weight:800;background:var(--night);color:var(--batter);border:0;border-radius:999px;padding:8px 14px;cursor:pointer;white-space:nowrap;flex:none}
+.pitch-body{display:none;background:#fbe3a8;color:var(--night)}
+.pitch-body.open{display:block}
+.pitch-body ul{margin:0 auto;padding:12px 16px 16px 34px;max-width:1120px;display:grid;gap:6px;font-size:15px;font-weight:600}
+
+/* header: logo and one order button */
+header.top{position:sticky;top:0;z-index:5;background:rgba(30,27,29,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:var(--hdr)}
+.logo{display:block;line-height:0}
+.logo img{height:44px;width:auto;display:block}
+.foot-logo{height:40px;width:auto;display:block}
+nav.links{display:none}
+header.top .js-order{display:none}
+
+/* hero */
+.hero{padding:28px 0 32px;background:radial-gradient(600px 300px at 100% 0%,var(--plum-2),transparent 70%)}
+.hero .wrap{display:grid;gap:20px}
+.hero h1{font-size:42px;font-weight:900;letter-spacing:-.03em}
+.hero h1 em{font-style:normal;color:var(--batter)}
+.hero p.lead{font-family:var(--body);font-size:17px;color:var(--muted);margin:14px 0 20px}
+.hero .actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.hero .actions .menu-link{grid-column:1/-1}
+.status{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:14px;border:1px solid var(--line);border-radius:999px;padding:6px 14px 6px 10px;margin-bottom:16px}
+.status i{width:10px;height:10px;border-radius:50%;background:#7be08f;box-shadow:0 0 0 4px rgba(123,224,143,.18)}
+.status.closed i{background:var(--berry);box-shadow:0 0 0 4px rgba(255,111,142,.18)}
+.crepe-art{display:none}
+
+/* facts: 2 x 2 */
+.facts{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.facts .wrap{display:grid;grid-template-columns:1fr 1fr}
+.fact{padding:14px 10px 14px 0}
+.fact b{display:block;font-size:17px;font-weight:900;color:var(--batter);font-variant-numeric:tabular-nums;line-height:1.25}
+.fact span{font-size:13px;color:var(--muted)}
+
+.sec-head{margin-bottom:20px}
+.sec-head p{margin:8px 0 0;color:var(--muted);font-family:var(--body);font-size:15.5px}
+
+/* signatures: swipe sideways on the phone */
+.sig-grid{display:grid;grid-auto-flow:column;grid-auto-columns:86%;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:0 16px 6px;scrollbar-width:none}
+.sig-grid::-webkit-scrollbar{display:none}
+.sig{scroll-snap-align:start;border-radius:20px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+.sig.sweet{background:linear-gradient(140deg,#4a2c33,#2e2224)}
+.sig.salty{background:linear-gradient(140deg,#4a3218,#2e1d14)}
+.sig .tag{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--batter)}
+.sig h3{font-size:26px;font-weight:900;margin-top:8px}
+.sig p{font-family:var(--body);font-size:16px;opacity:.9;margin:10px 0 0}
+.sig .row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.price-big{font-size:26px;font-weight:900;font-variant-numeric:tabular-nums}
+.swipe-hint{font-size:13px;color:var(--muted);margin-top:10px}
+
+/* menu: sticky category bar that scrolls sideways */
+#menu{background:var(--plum)}
+.menu-tools{position:sticky;top:var(--hdr);z-index:4;background:var(--plum);margin:0 -16px 18px;padding:10px 16px;border-bottom:1px solid var(--line);display:grid;gap:10px}
+.search input{font:inherit;font-size:16px;width:100%;min-height:44px;background:var(--night);color:var(--text);border:1.5px solid var(--line);border-radius:999px;padding:9px 16px;-webkit-appearance:none;appearance:none}
+.search input::placeholder{color:var(--muted)}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:0 16px}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;font:inherit;font-size:14.5px;font-weight:700;color:var(--text);background:transparent;border:1.5px solid var(--line);border-radius:999px;min-height:42px;padding:8px 16px;cursor:pointer;white-space:nowrap}
+.chip[aria-pressed="true"]{background:var(--batter);border-color:var(--batter);color:var(--night)}
+.cat{margin-bottom:26px;scroll-margin-top:calc(var(--hdr) + 120px)}
+.cat h3{font-size:21px;font-weight:900;display:flex;align-items:baseline;gap:10px;margin-bottom:2px}
+.cat h3 small{font-size:13px;font-weight:600;color:var(--muted)}
+.items{display:grid}
+.item{display:grid;grid-template-columns:1fr auto;gap:2px 14px;padding:13px 0;border-bottom:1px dashed var(--line)}
+.item .name{font-weight:700;font-size:16.5px}
+.item .p{font-weight:800;color:var(--batter);font-variant-numeric:tabular-nums;white-space:nowrap}
+.item .desc{grid-column:1/-1;margin:0}
+.badge{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:var(--berry);color:var(--night);border-radius:6px;padding:2px 7px;margin-left:6px;vertical-align:2px}
+#menuList{scroll-margin-top:calc(var(--hdr) + 120px)}
+.empty{color:var(--muted);font-family:var(--body);font-style:italic;padding:20px 0}
+
+/* builder */
+.builder{display:grid;gap:14px}
+.panel{background:var(--plum);border:1px solid var(--line);border-radius:20px;padding:18px}
+.toggle{display:grid;grid-template-columns:1fr 1fr;background:var(--night);border-radius:999px;padding:4px;margin-bottom:16px}
+.toggle button{font:inherit;font-weight:800;font-size:15px;border:0;border-radius:999px;min-height:42px;background:transparent;color:var(--muted);cursor:pointer}
+.toggle button[aria-pressed="true"]{background:var(--batter);color:var(--night)}
+.ing{display:flex;flex-wrap:wrap;gap:8px}
+.ing .chip[aria-pressed="true"]{background:var(--berry);border-color:var(--berry);color:var(--night)}
+.result h3{font-size:22px;font-weight:900}
+.result .list{font-family:var(--body);font-size:17px;margin:10px 0 6px}
+.result .note{font-size:14px;color:var(--muted);margin:0 0 14px}
+.result > .btn{width:100%}
+.extras{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.extra{border:1px solid var(--line);border-radius:14px;padding:12px;font-size:14.5px}
+.extra b{display:block;font-size:15.5px}
+.extra span{color:var(--batter);font-weight:800}
+
+/* visit */
+#visit{background:var(--plum)}
+.visit{display:grid;gap:14px}
+.card{background:var(--night);border:1px solid var(--line);border-radius:20px;padding:20px}
+.card h3{font-size:19px;font-weight:900;margin-bottom:12px}
+.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:15px}
+.hours td{padding:8px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;font-weight:700}
+.hours tr.today td{color:var(--batter)}
+.addr{font-size:20px;font-weight:800;line-height:1.3;margin:0 0 6px}
+.placeholder{display:inline-block;border:1.5px dashed var(--muted);border-radius:8px;padding:2px 10px;color:var(--muted);font-size:14.5px}
+.mapbox{margin-top:16px;border-radius:16px;height:130px;background:
+  repeating-linear-gradient(0deg,transparent 0 28px,rgba(251,239,227,.06) 28px 30px),
+  repeating-linear-gradient(90deg,transparent 0 40px,rgba(251,239,227,.06) 40px 42px),
+  linear-gradient(135deg,#3a3336,#262224);position:relative;display:flex;align-items:center;justify-content:center;text-decoration:none}
+.mapbox .pin{width:22px;height:22px;background:var(--berry);border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 0 0 6px rgba(255,111,142,.2)}
+.mapbox em{position:absolute;bottom:12px;right:14px;font-style:normal;font-weight:800;font-size:14px;color:var(--batter)}
+
+footer{padding:28px 0 24px;color:var(--muted);font-size:14px}
+footer .wrap{display:grid;gap:12px}
+footer a{color:var(--text)}
+
+/* order chooser: bottom sheet on the phone */
+dialog.order{border:1px solid var(--line);border-bottom:0;border-radius:24px 24px 0 0;background:var(--plum);color:var(--text);padding:0;width:100%;max-width:100%;margin:auto 0 0;max-height:90%}
+dialog.order::backdrop{background:rgba(10,8,9,.7)}
+.order-in{padding:20px 16px 24px;display:grid;gap:14px}
+.order-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.order-top h2{font-size:24px}
+.x{font:inherit;font-size:22px;line-height:1;background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:50%;width:44px;height:44px;cursor:pointer;flex:none}
+.opts{display:grid;gap:10px}
+.opt{border:1.5px solid var(--line);border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:8px;background:var(--night)}
+.opt.on{border-color:var(--batter)}
+.opt h3{font-size:19px;font-weight:900}
+.opt p{margin:0;font-family:var(--body);color:var(--muted);font-size:15px}
+.opt .btn{margin-top:4px}
+
+/* sticky order bar for thumbs */
+.orderbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:6;padding:10px 16px 14px;background:linear-gradient(to top,rgba(30,27,29,.98) 70%,rgba(30,27,29,0))}
+.orderbar .btn{box-shadow:0 8px 24px rgba(0,0,0,.4)}
+
+/* old language switch */
+.hdr-right{display:flex;align-items:center;gap:10px}
+.lang{display:inline-flex;border:1.5px solid var(--line);border-radius:999px;padding:3px}
+.lang button{font:inherit;font-size:13px;font-weight:800;border:0;background:transparent;color:var(--muted);border-radius:999px;min-width:42px;min-height:36px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--text);color:var(--night)}
+.extra .from{margin-right:2px}
+
+/* language picker */
+.lang-pick{position:relative;display:inline-flex;align-items:center}
+.lang-pick svg{position:absolute;inset-inline-start:11px;width:16px;height:16px;pointer-events:none;color:var(--muted)}
+.lang-pick select{font:inherit;font-size:14px;font-weight:700;color:var(--text);background:transparent;border:1.5px solid var(--line);border-radius:999px;min-height:40px;padding:6px 14px 6px 34px;padding-inline-start:34px;padding-inline-end:14px;-webkit-appearance:none;appearance:none;cursor:pointer;max-width:150px}
+.lang-pick select option{color:#1e1b1d}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+/* right to left (Hebrew) */
+html[lang="he"]{--display:"Rubik","Segoe UI",system-ui,sans-serif;--body:"Rubik","Segoe UI",system-ui,sans-serif}
+html[lang="he"] .desc,html[lang="he"] .sig p,html[lang="he"] .hero p.lead{font-style:normal}
+[dir="rtl"] .badge{margin-left:0;margin-right:6px}
+[dir="rtl"] .mapbox em{right:auto;left:14px}
+[dir="rtl"] .hours td:last-child{text-align:left}
+[dir="rtl"] .pitch,[dir="rtl"] .pitch-body{direction:ltr}
+a[href^="tel:"]{unicode-bidi:isolate;direction:ltr}
+
+/* bigger phones and small tablets */
+@media (min-width:600px){
+  .wrap{padding:0 24px}
+  .hero h1{font-size:56px}
+  .hero .actions{display:flex;flex-wrap:wrap}
+  .facts .wrap{grid-template-columns:repeat(4,1fr)}
+  .sig-grid{grid-auto-flow:row;grid-template-columns:1fr 1fr;grid-auto-columns:auto;overflow:visible;margin:0;padding:0}
+  .swipe-hint{display:none}
+  .items{grid-template-columns:1fr 1fr;column-gap:36px}
+  .menu-tools{margin:0 -24px 22px;padding:12px 24px;grid-template-columns:1fr 240px;align-items:center}
+  .menu-tools .search{order:2}
+  .chips{margin:0;padding:0}
+  .visit{grid-template-columns:1fr 1fr}
+  dialog.order{border-bottom:1px solid var(--line);border-radius:24px;width:min(560px,calc(100% - 32px));margin:auto}
+  .opts{grid-template-columns:1fr 1fr}
+  .order-in{padding:26px}
+}
+
+/* desktop */
+@media (min-width:900px){
+  :root{--hdr:76px}
+  body{font-size:17px;padding-bottom:0}
+  section{padding:72px 0}
+  h2{font-size:44px}
+  .logo img{height:56px}
+  nav.links{display:flex;gap:22px;font-weight:600;font-size:15px}
+  nav.links a{text-decoration:none;color:var(--muted)}
+  nav.links a:hover{color:var(--text)}
+  header.top .js-order{display:inline-flex}
+  .orderbar{display:none}
+  .hero{padding:56px 0 48px}
+  .hero .wrap{grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+  .hero h1{font-size:80px}
+  .hero p.lead{font-size:19px;max-width:52ch;margin:22px 0 26px}
+  .crepe-art{display:block;width:100%;max-width:420px;justify-self:center}
+  .fact{padding:20px 16px 20px 0}
+  .fact b{font-size:22px}
+  .sig{padding:30px;min-height:250px}
+  .sig h3{font-size:32px}
+  .builder{grid-template-columns:1.2fr .8fr;gap:28px;align-items:start}
+  .panel{padding:26px}
+  .result > .btn{width:auto}
+  footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center}
+}
+</style>
+</head>
+<body>
+
+<div class="pitch" role="region" aria-label="Σημείωση πρότασης">
+  <div class="wrap">
+    <span>Δείγμα ιστοσελίδας με το πραγματικό σας μενού.</span>
+    <button type="button" id="pitchBtn" aria-expanded="false" aria-controls="pitchBody">Γιατί να την έχετε;</button>
+  </div>
+</div>
+<div class="pitch-body" id="pitchBody">
+  <ul>
+    <li>Όποιος ψάχνει «κρέπες κέντρο Θεσσαλονίκη» στο Google βρίσκει τη δική σας σελίδα, με το δικό σας όνομα.</li>
+    <li>Είναι σε 9 γλώσσες: ελληνικά, αγγλικά, τουρκικά, βουλγαρικά, ρουμανικά, σερβικά, γερμανικά, ιταλικά και εβραϊκά. Κάθε γλώσσα έχει δική της σελίδα και τη βρίσκει το Google.</li>
+    <li>Μενού, τιμές και ωράριο τα αλλάζετε όποτε θέλετε, σε ένα λεπτό.</li>
+    <li>Ανοίγει γρήγορα στο κινητό, εκεί που ψάχνει ο κόσμος για φαγητό.</li>
+    <li>Αργότερα μπορεί να παίρνει και δικές σας παραγγελίες, χωρίς προμήθεια σε πλατφόρμα.</li>
+    <li>Τα σχέδια μπαίνουν στη θέση τους με δικές σας φωτογραφίες από το μαγαζί.</li>
+    <li>Το λογότυπο είναι από το Instagram σας. Με το αρχικό αρχείο θα φαίνεται πιο καθαρό.</li>
+  </ul>
+</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top"><img src="../logo.png" alt="Σούσουρο creperie" width="182" height="58"></a>
+    <nav class="links" data-ta="aria-label:navLabel" aria-label="Κύριο μενού">
+      <a href="#signature" data-t="navSig">Οι Σούσουρο</a>
+      <a href="#menu" data-t="navMenu">Μενού</a>
+      <a href="#build" data-t="navBuild">Φτιάξε τη δική σου</a>
+      <a href="#visit" data-t="navVisit">Πού είμαστε</a>
+    </nav>
+    <div class="hdr-right">
+      <label class="lang-pick"><span class="sr-only" data-t="langLabel">Γλώσσα</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg><select id="langSel"></select></label>
+      <button type="button" class="btn btn-gold btn-sm js-order" data-t="order">Παράγγειλε</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="status" id="status"><i></i><span id="statusText">Ανοιχτά τώρα, ως τις 02:00</span></div>
+      <h1 data-t="h1" data-html>Κρέπες που κάνουν <em>σούσουρο</em>.</h1>
+      <p class="lead" data-t="lead">Γλυκές και αλμυρές κρέπες, καφές και κρύα μπύρα στη Γούναρη 24. Ανοιχτά κάθε μέρα, από τις 8 το πρωί ως τις 2 τα ξημερώματα.</p>
+      <div class="actions">
+        <a class="btn btn-gold" href="https://www.e-food.gr/delivery/thessaloniki/sousouro-creperie-9444536" data-t="del">Delivery</a>
+        <button type="button" class="btn btn-ghost js-order" data-tab="take" data-t="take">Take away</button>
+        <a class="btn btn-ghost menu-link" href="#menu" data-t="seeMenu">Δες το μενού</a>
+      </div>
+    </div>
+    <svg class="crepe-art" viewBox="0 0 400 400" role="img" aria-label="Σχέδιο από κρέπα με σοκολάτα και φράουλες">
+      <defs>
+        <radialGradient id="g1" cx="45%" cy="40%" r="65%">
+          <stop offset="0" stop-color="#ffe0a0"/><stop offset=".6" stop-color="#f5c35c"/><stop offset="1" stop-color="#d9973a"/>
+        </radialGradient>
+        <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#ffd987"/><stop offset="1" stop-color="#e3a646"/>
+        </linearGradient>
+      </defs>
+      <circle cx="200" cy="200" r="182" fill="#3a3336"/>
+      <circle cx="200" cy="200" r="150" fill="url(#g1)"/>
+      <g fill="#c98a33" opacity=".55">
+        <circle cx="150" cy="140" r="9"/><circle cx="250" cy="120" r="6"/><circle cx="120" cy="230" r="7"/>
+        <circle cx="280" cy="250" r="8"/><circle cx="210" cy="300" r="6"/><circle cx="300" cy="180" r="5"/>
+      </g>
+      <path d="M200 200 L350 200 A150 150 0 0 1 200 350 Z" fill="url(#g2)" stroke="#c98a33" stroke-width="2"/>
+      <path d="M70 150 C120 120,150 190,200 160 S280 110,330 150 M80 230 C130 200,170 260,215 230 S300 200,330 230" fill="none" stroke="#4a2414" stroke-width="10" stroke-linecap="round"/>
+      <g>
+        <path d="M120 285 q18 -26 36 0 q-18 30 -36 0z" fill="#ff6f8e"/>
+        <path d="M128 266 l10 8 l10 -8" fill="none" stroke="#5fb36a" stroke-width="5" stroke-linecap="round"/>
+        <path d="M262 92 q18 -26 36 0 q-18 30 -36 0z" fill="#ff6f8e"/>
+        <path d="M270 73 l10 8 l10 -8" fill="none" stroke="#5fb36a" stroke-width="5" stroke-linecap="round"/>
+      </g>
+      <g fill="#fbefe3"><circle cx="175" cy="105" r="3"/><circle cx="235" cy="185" r="3"/><circle cx="100" cy="190" r="3"/><circle cx="260" cy="295" r="3"/></g>
+    </svg>
+  </div>
+</section>
+
+<div class="facts">
+  <div class="wrap">
+    <div class="fact"><b data-t="f1b">08:00 με 02:00</b><span data-t="f1s">κάθε μέρα</span></div>
+    <div class="fact"><b data-t="f2b">Από €2,00</b><span data-t="f2s">η δική σου κρέπα</span></div>
+    <div class="fact"><b data-t="f3b">Γούναρη 24</b><span data-t="f3s">κέντρο Θεσσαλονίκης</span></div>
+    <div class="fact"><b data-t="f4b">Delivery ή take away</b><span data-t="f4s">όπως σε βολεύει</span></div>
+  </div>
+</div>
+
+<section id="signature">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2 data-t="sigH">Οι δύο Σούσουρο</h2>
+        <p data-t="sigP">Η γλυκιά και η αλμυρή που έχουν το όνομά μας. Αν είναι η πρώτη σου φορά, ξεκίνα από εδώ.</p>
+      </div>
+    </div>
+    <div class="sig-grid">
+      <article class="sig sweet">
+        <div>
+          <div class="tag" data-t="sweet">Γλυκιά</div>
+          <h3 data-t="sigName">Κρέπα Σούσουρο</h3>
+          <p data-t="sigSweetP">Αλατισμένη καραμέλα, άνθος αλατιού, τριμμένο μπισκότο Oreo και από πάνω πραλίνα Bueno.</p>
+        </div>
+        <div class="row"><span class="price-big" data-p="5">€5,00</span><button type="button" class="btn btn-gold btn-sm js-order" data-t="orderIt">Παράγγειλέ τη</button></div>
+      </article>
+      <article class="sig salty">
+        <div>
+          <div class="tag" data-t="salty">Αλμυρή</div>
+          <h3 data-t="sigName">Κρέπα Σούσουρο</h3>
+          <p data-t="sigSaltyP">Καπνιστό τυρί, κοτοκριτσίνι, μπέικον, μανιτάρια και η δική μας σος Σούσουρο.</p>
+        </div>
+        <div class="row"><span class="price-big" data-p="7">€7,00</span><button type="button" class="btn btn-gold btn-sm js-order" data-t="orderIt">Παράγγειλέ τη</button></div>
+      </article>
+    </div>
+    <p class="swipe-hint" data-t="swipe">Σύρε για να δεις και τη δεύτερη.</p>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2 data-t="menuH">Μενού</h2>
+        <p data-t="menuP">Όλες οι τιμές σε ευρώ, με ΦΠΑ.</p>
+      </div>
+    </div>
+    <div class="menu-tools">
+      <div class="chips" id="chips" role="group" data-ta="aria-label:catsLabel" aria-label="Κατηγορίες"></div>
+      <div class="search">
+        <label for="q" class="sr-only" data-t="searchLabel">Ψάξε στο μενού</label>
+        <input id="q" type="search" data-ta="placeholder:searchPh" placeholder="Ψάξε στο μενού, π.χ. μπέικον">
+      </div>
+    </div>
+    <div id="menuList"></div>
+  </div>
+</section>
+
+<section id="build">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2 data-t="buildH">Φτιάξε τη δική σου</h2>
+        <p data-t="buildP">Διάλεξε γλυκιά ή αλμυρή και βάλε μέσα ό,τι σου αρέσει.</p>
+      </div>
+    </div>
+    <div class="builder">
+      <div class="panel">
+        <div class="toggle" role="group" data-ta="aria-label:kindLabel" aria-label="Είδος κρέπας">
+          <button type="button" id="tSweet" aria-pressed="true" data-t="sweet">Γλυκιά</button>
+          <button type="button" id="tSalty" aria-pressed="false" data-t="salty">Αλμυρή</button>
+        </div>
+        <div class="ing" id="ing" role="group" data-ta="aria-label:ingLabel" aria-label="Υλικά"></div>
+      </div>
+      <div class="panel result">
+        <h3 id="resTitle">Η γλυκιά σου κρέπα</h3>
+        <p class="list" id="resList">Δεν έχεις βάλει υλικά ακόμα.</p>
+        <p class="note" data-t="buildNote">Από €2,00. Η τελική τιμή βγαίνει από τα υλικά που θα βάλεις.</p>
+        <button type="button" class="btn btn-gold js-order" data-t="orderIt">Παράγγειλέ τη</button>
+        <div class="extras">
+          <div class="extra"><b data-t="ownSandwich">Δικό σου sandwich</b><span data-t="from" class="from">από</span> <span data-p="1.7">€1,70</span></div>
+          <div class="extra"><b data-t="ownHotdog">Δικό σου hot dog</b><span data-t="from" class="from">από</span> <span data-p="3">€3,00</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="sec-head"><div><h2 data-t="visitH">Πού είμαστε</h2></div></div>
+    <div class="visit">
+      <div class="card">
+        <h3 data-t="addrH">Διεύθυνση</h3>
+        <p class="addr" data-t="addr" data-html>Δημητρίου Γούναρη 24<br>Θεσσαλονίκη 54621</p>
+        <p style="margin:0"><span data-t="phone">Τηλέφωνο:</span> <a href="tel:+306987489339">698 748 9339</a></p>
+        <a class="mapbox" href="https://www.google.com/maps/search/?api=1&amp;query=Sousouro%20Creperie&amp;query_place_id=ChIJrwDLhP05qBQRDC1IWSQzHgg" data-ta="aria-label:mapLabel" aria-label="Άνοιξε τη θέση μας στο Google Maps">
+          <span class="pin"></span><em data-t="directions">Οδηγίες στον χάρτη</em>
+        </a>
+      </div>
+      <div class="card">
+        <h3 data-t="hoursH">Ωράριο</h3>
+        <table class="hours" id="hours"></table>
+        <p class="desc" style="margin:14px 0 0" data-t="hoursNote">Delivery μέσω e-food από τις 09:00, με ελάχιστη παραγγελία €6,00. Για take away πάρε μας τηλέφωνο ή πέρασε από το μαγαζί.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span style="display:flex;align-items:center;gap:16px;flex-wrap:wrap"><img class="foot-logo" src="" alt="Σούσουρο creperie" width="138" height="44"><span data-t="footAddr">Δημητρίου Γούναρη 24, Θεσσαλονίκη</span></span>
+    <span>Instagram: <a href="https://www.instagram.com/sousouro_skg/">@sousouro_skg</a></span>
+  </div>
+</footer>
+
+<dialog class="order" id="orderDlg" aria-labelledby="orderTitle">
+  <div class="order-in">
+    <div class="order-top">
+      <h2 id="orderTitle" data-t="dlgH">Πώς θα το πάρεις;</h2>
+      <button type="button" class="x" id="orderClose" data-ta="aria-label:close" aria-label="Κλείσιμο">×</button>
+    </div>
+    <div class="opts">
+      <div class="opt" id="optDel">
+        <h3 data-t="del">Delivery</h3>
+        <p data-t="dlgDel">Παράγγειλε από το e-food και έρχεται στην πόρτα σου. Ελάχιστη παραγγελία €6,00.</p>
+        <a class="btn btn-gold" href="https://www.e-food.gr/delivery/thessaloniki/sousouro-creperie-9444536" data-t="openEfood">Άνοιξε το e-food</a>
+      </div>
+      <div class="opt" id="optTake">
+        <h3 data-t="take">Take away</h3>
+        <p data-t="dlgTake">Πάρε μας τηλέφωνο να το έχουμε έτοιμο ή πέρασε από το μαγαζί, στη Γούναρη 24.</p>
+        <a class="btn btn-gold" href="tel:+306987489339" data-t="call">Κάλεσε 698 748 9339</a>
+        <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Sousouro%20Creperie&amp;query_place_id=ChIJrwDLhP05qBQRDC1IWSQzHgg" data-t="directions">Οδηγίες στον χάρτη</a>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<div class="orderbar"><a class="btn btn-gold" href="https://www.e-food.gr/delivery/thessaloniki/sousouro-creperie-9444536" data-t="del">Delivery</a><button type="button" class="btn btn-dark js-order" data-tab="take" data-t="take">Take away</button></div>
+
+<script>window.PAGE_LANG="en";window.LANG_URLS={"el": "../", "en": "../en/", "tr": "../tr/", "bg": "../bg/", "ro": "../ro/", "sr": "../sr/", "de": "../de/", "it": "../it/", "he": "../he/"};</script>
+<script>
+const LANGS = ["el","en","tr","bg","ro","sr","de","it","he"];
+const LANG_NAMES = {el:"Ελληνικά",en:"English",tr:"Türkçe",bg:"Български",ro:"Română",sr:"Srpski",de:"Deutsch",it:"Italiano",he:"עברית"};
+const COMMA = {el:1,tr:1,bg:1,ro:1,sr:1,de:1,it:1};
+
+const T = {
+  el:{
+    title:"Sousouro Creperie · Κρέπες στη Θεσσαλονίκη",
+    desc:"Γλυκές και αλμυρές κρέπες, καφές και μπύρα στη Γούναρη 24, Θεσσαλονίκη. Ανοιχτά κάθε μέρα 08:00 με 02:00. Delivery και take away.",
+    langLabel:"Γλώσσα",
+    navLabel:"Κύριο μενού", navSig:"Οι Σούσουρο", navMenu:"Μενού", navBuild:"Φτιάξε τη δική σου", navVisit:"Πού είμαστε",
+    order:"Παράγγειλε", orderIt:"Παράγγειλέ τη", del:"Delivery", take:"Take away",
+    h1:"Κρέπες που κάνουν <em>σούσουρο</em>.",
+    lead:"Γλυκές και αλμυρές κρέπες, καφές και κρύα μπύρα στη Γούναρη 24. Ανοιχτά κάθε μέρα, από τις 8 το πρωί ως τις 2 τα ξημερώματα.",
+    seeMenu:"Δες το μενού",
+    f1b:"08:00 με 02:00", f1s:"κάθε μέρα", f2b:"Από €2,00", f2s:"η δική σου κρέπα", f3b:"Γούναρη 24", f3s:"κέντρο Θεσσαλονίκης", f4b:"Delivery ή take away", f4s:"όπως σε βολεύει",
+    sigH:"Οι δύο Σούσουρο", sigP:"Η γλυκιά και η αλμυρή που έχουν το όνομά μας. Αν είναι η πρώτη σου φορά, ξεκίνα από εδώ.",
+    sweet:"Γλυκιά", salty:"Αλμυρή", sigName:"Κρέπα Σούσουρο",
+    sigSweetP:"Αλατισμένη καραμέλα, άνθος αλατιού, τριμμένο μπισκότο Oreo και από πάνω πραλίνα Bueno.",
+    sigSaltyP:"Καπνιστό τυρί, κοτοκριτσίνι, μπέικον, μανιτάρια και η δική μας σος Σούσουρο.",
+    swipe:"Σύρε για να δεις και τη δεύτερη.",
+    menuH:"Μενού", menuP:"Όλες οι τιμές σε ευρώ, με ΦΠΑ.", catsLabel:"Κατηγορίες", searchLabel:"Ψάξε στο μενού", searchPh:"Ψάξε στο μενού, π.χ. μπέικον",
+    all:"Όλα", count:n => n + (n === 1 ? " επιλογή" : " επιλογές"), badge:"Η δική μας", from:"από ", empty:"Δεν βρήκαμε κάτι. Δοκίμασε άλλη λέξη.",
+    buildH:"Φτιάξε τη δική σου", buildP:"Διάλεξε γλυκιά ή αλμυρή και βάλε μέσα ό,τι σου αρέσει.", kindLabel:"Είδος κρέπας", ingLabel:"Υλικά",
+    resSweet:"Η γλυκιά σου κρέπα", resSalty:"Η αλμυρή σου κρέπα", resEmpty:"Δεν έχεις βάλει υλικά ακόμα.",
+    buildNote:"Από €2,00. Η τελική τιμή βγαίνει από τα υλικά που θα βάλεις.", ownSandwich:"Δικό σου sandwich", ownHotdog:"Δικό σου hot dog",
+    visitH:"Πού είμαστε", addrH:"Διεύθυνση", addr:"Δημητρίου Γούναρη 24<br>Θεσσαλονίκη 54621", phone:"Τηλέφωνο:",
+    mapLabel:"Άνοιξε τη θέση μας στο Google Maps", directions:"Οδηγίες στον χάρτη",
+    hoursH:"Ωράριο", hoursNote:"Delivery μέσω e-food από τις 09:00, με ελάχιστη παραγγελία €6,00. Για take away πάρε μας τηλέφωνο ή πέρασε από το μαγαζί.",
+    footAddr:"Δημητρίου Γούναρη 24, Θεσσαλονίκη",
+    dlgH:"Πώς θα το πάρεις;", close:"Κλείσιμο",
+    dlgDel:"Παράγγειλε από το e-food και έρχεται στην πόρτα σου. Ελάχιστη παραγγελία €6,00.", openEfood:"Άνοιξε το e-food",
+    dlgTake:"Πάρε μας τηλέφωνο να το έχουμε έτοιμο ή πέρασε από το μαγαζί, στη Γούναρη 24.", call:"Κάλεσε 698 748 9339",
+    openNow:"Ανοιχτά τώρα, ως τις 02:00", closedNow:"Κλειστά τώρα, ανοίγουμε στις 08:00", today:" (σήμερα)", hoursRow:"08:00 με 02:00",
+    days:["Κυριακή","Δευτέρα","Τρίτη","Τετάρτη","Πέμπτη","Παρασκευή","Σάββατο"]
+  },
+  en:{
+    title:"Sousouro Creperie · Crepes in Thessaloniki",
+    desc:"Sweet and savoury crepes, coffee and beer at Gounari 24, Thessaloniki. Open every day 08:00 to 02:00. Delivery and take away.",
+    langLabel:"Language",
+    navLabel:"Main menu", navSig:"Signature crepes", navMenu:"Menu", navBuild:"Build your own", navVisit:"Find us",
+    order:"Order", orderIt:"Order it", del:"Delivery", take:"Take away",
+    h1:"Crepes that get everyone <em>talking</em>.",
+    lead:"Sweet and savoury crepes, coffee and cold beer at Gounari 24. Open every day, from 8 in the morning until 2 at night.",
+    seeMenu:"See the menu",
+    f1b:"08:00 to 02:00", f1s:"every day", f2b:"From €2.00", f2s:"build your own crepe", f3b:"Gounari 24", f3s:"Thessaloniki city centre", f4b:"Delivery or take away", f4s:"whatever suits you",
+    sigH:"Our two signatures", sigP:"The sweet one and the savoury one that carry our name. First time here? Start with these.",
+    sweet:"Sweet", salty:"Savoury", sigName:"Sousouro crepe",
+    sigSweetP:"Salted caramel, sea salt flakes, crushed Oreo, topped with Bueno praline.",
+    sigSaltyP:"Smoked cheese, crispy chicken bites, bacon, mushrooms and our own Sousouro sauce.",
+    swipe:"Swipe to see the second one.",
+    menuH:"Menu", menuP:"All prices in euro, VAT included.", catsLabel:"Categories", searchLabel:"Search the menu", searchPh:"Search the menu, e.g. bacon",
+    all:"All", count:n => n + (n === 1 ? " item" : " items"), badge:"House special", from:"from ", empty:"Nothing found. Try another word.",
+    buildH:"Build your own", buildP:"Pick sweet or savoury and fill it with whatever you like.", kindLabel:"Crepe type", ingLabel:"Fillings",
+    resSweet:"Your sweet crepe", resSalty:"Your savoury crepe", resEmpty:"No fillings yet.",
+    buildNote:"From €2.00. The final price depends on your fillings.", ownSandwich:"Your own sandwich", ownHotdog:"Your own hot dog",
+    visitH:"Find us", addrH:"Address", addr:"Dimitriou Gounari 24<br>Thessaloniki 54621", phone:"Phone:",
+    mapLabel:"Open our location in Google Maps", directions:"Get directions",
+    hoursH:"Opening hours", hoursNote:"Delivery through e-food from 09:00, minimum order €6.00. For take away, give us a call or just drop by.",
+    footAddr:"Dimitriou Gounari 24, Thessaloniki",
+    dlgH:"How do you want it?", close:"Close",
+    dlgDel:"Order on e-food and we bring it to your door. Minimum order €6.00.", openEfood:"Open e-food",
+    dlgTake:"Call us and we'll have it ready, or just drop by the shop at Gounari 24.", call:"Call 698 748 9339",
+    openNow:"Open now, until 02:00", closedNow:"Closed now, we open at 08:00", today:" (today)", hoursRow:"08:00 to 02:00",
+    days:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+  },
+  tr:{
+    title:"Sousouro Creperie · Selanik'te krep",
+    desc:"Selanik Gounari 24'te tatlı ve tuzlu krepler, kahve ve bira. Her gün 08:00-02:00 açık. Paket servis ve gel al.",
+    langLabel:"Dil",
+    navLabel:"Ana menü", navSig:"Özel kreplerimiz", navMenu:"Menü", navBuild:"Kendin yap", navVisit:"Konum",
+    order:"Sipariş ver", orderIt:"Sipariş ver", del:"Paket servis", take:"Gel al",
+    h1:"Herkesin <em>konuştuğu</em> krepler.",
+    lead:"Gounari 24'te tatlı ve tuzlu krepler, kahve ve soğuk bira. Her gün sabah 8'den gece 2'ye kadar açığız.",
+    seeMenu:"Menüyü gör",
+    f1b:"08:00-02:00", f1s:"her gün", f2b:"En az €2,00", f2s:"kendi krebin", f3b:"Gounari 24", f3s:"Selanik merkez", f4b:"Paket servis veya gel al", f4s:"nasıl istersen",
+    sigH:"İki özel krebimiz", sigP:"Adımızı taşıyan tatlı ve tuzlu krep. İlk kez mi geliyorsun? Bunlarla başla.",
+    sweet:"Tatlı", salty:"Tuzlu", sigName:"Sousouro krep",
+    sigSweetP:"Tuzlu karamel, deniz tuzu, ezilmiş Oreo ve üzerinde Bueno pralin.",
+    sigSaltyP:"Füme peynir, çıtır tavuk, bacon, mantar ve özel Sousouro sosumuz.",
+    swipe:"İkincisini görmek için kaydır.",
+    menuH:"Menü", menuP:"Tüm fiyatlar euro, KDV dahil.", catsLabel:"Kategoriler", searchLabel:"Menüde ara", searchPh:"Menüde ara, ör. mantar",
+    all:"Tümü", count:n => n + " ürün", badge:"Özel", from:"en az ", empty:"Bir şey bulamadık. Başka bir kelime dene.",
+    buildH:"Kendi krebini yap", buildP:"Tatlı ya da tuzlu seç, içine istediğini koy.", kindLabel:"Krep türü", ingLabel:"Malzemeler",
+    resSweet:"Tatlı krebin", resSalty:"Tuzlu krebin", resEmpty:"Henüz malzeme seçmedin.",
+    buildNote:"En az €2,00. Son fiyat seçtiğin malzemelere göre belirlenir.", ownSandwich:"Kendi sandviçin", ownHotdog:"Kendi hot dog'un",
+    visitH:"Konum", addrH:"Adres", addr:"Dimitriou Gounari 24<br>Selanik 54621", phone:"Telefon:",
+    mapLabel:"Konumumuzu Google Maps'te aç", directions:"Yol tarifi al",
+    hoursH:"Çalışma saatleri", hoursNote:"e-food üzerinden paket servis 09:00'dan itibaren, minimum sipariş €6,00. Gel al için bizi ara ya da dükkâna uğra.",
+    footAddr:"Dimitriou Gounari 24, Selanik",
+    dlgH:"Nasıl almak istersin?", close:"Kapat",
+    dlgDel:"e-food'dan sipariş ver, kapına gelsin. Minimum sipariş €6,00.", openEfood:"e-food'u aç",
+    dlgTake:"Bizi ara, hazırlayalım ya da Gounari 24'teki dükkâna uğra.", call:"Ara: 698 748 9339",
+    openNow:"Şu an açık, 02:00'ye kadar", closedNow:"Şu an kapalı, 08:00'de açılıyoruz", today:" (bugün)", hoursRow:"08:00-02:00",
+    days:["Pazar","Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi"]
+  },
+  bg:{
+    title:"Sousouro Creperie · Палачинки в Солун",
+    desc:"Сладки и солени палачинки, кафе и бира на ул. Гунари 24, Солун. Отворено всеки ден 08:00-02:00. Доставка и за вкъщи.",
+    langLabel:"Език",
+    navLabel:"Главно меню", navSig:"Нашите специалитети", navMenu:"Меню", navBuild:"Твоята палачинка", navVisit:"Къде сме",
+    order:"Поръчай", orderIt:"Поръчай", del:"Доставка", take:"За вкъщи",
+    h1:"Палачинки, за които всички <em>говорят</em>.",
+    lead:"Сладки и солени палачинки, кафе и студена бира на ул. Гунари 24. Отворено всеки ден от 8 сутринта до 2 през нощта.",
+    seeMenu:"Виж менюто",
+    f1b:"08:00-02:00", f1s:"всеки ден", f2b:"От €2,00", f2s:"твоята палачинка", f3b:"ул. Гунари 24", f3s:"център на Солун", f4b:"Доставка или за вкъщи", f4s:"както ти е удобно",
+    sigH:"Двете Sousouro", sigP:"Сладката и солената, които носят нашето име. За първи път ли си тук? Започни с тях.",
+    sweet:"Сладка", salty:"Солена", sigName:"Палачинка Sousouro",
+    sigSweetP:"Солен карамел, морска сол, натрошени Oreo и пралина Bueno отгоре.",
+    sigSaltyP:"Пушено сирене, хрупкави пилешки хапки, бекон, гъби и нашият сос Sousouro.",
+    swipe:"Плъзни, за да видиш втората.",
+    menuH:"Меню", menuP:"Всички цени са в евро, с ДДС.", catsLabel:"Категории", searchLabel:"Търси в менюто", searchPh:"Търси в менюто, напр. бекон",
+    all:"Всички", count:n => n + (n === 1 ? " артикул" : " артикула"), badge:"Специалитет", from:"от ", empty:"Нищо не намерихме. Опитай с друга дума.",
+    buildH:"Направи своя палачинка", buildP:"Избери сладка или солена и сложи каквото обичаш.", kindLabel:"Вид палачинка", ingLabel:"Съставки",
+    resSweet:"Твоята сладка палачинка", resSalty:"Твоята солена палачинка", resEmpty:"Още не си избрал съставки.",
+    buildNote:"От €2,00. Крайната цена зависи от съставките.", ownSandwich:"Твоят сандвич", ownHotdog:"Твоят хот-дог",
+    visitH:"Къде сме", addrH:"Адрес", addr:"ул. Димитриу Гунари 24<br>Солун 54621", phone:"Телефон:",
+    mapLabel:"Отвори ни в Google Maps", directions:"Упътване",
+    hoursH:"Работно време", hoursNote:"Доставка през e-food от 09:00, минимална поръчка €6,00. За вкъщи ни се обади или ела в магазина.",
+    footAddr:"ул. Димитриу Гунари 24, Солун",
+    dlgH:"Как го искаш?", close:"Затвори",
+    dlgDel:"Поръчай през e-food и ще го донесем до вратата ти. Минимална поръчка €6,00.", openEfood:"Отвори e-food",
+    dlgTake:"Обади ни се и ще го приготвим, или просто ела в магазина на ул. Гунари 24.", call:"Обади се: 698 748 9339",
+    openNow:"Отворено сега, до 02:00", closedNow:"Затворено, отваряме в 08:00", today:" (днес)", hoursRow:"08:00-02:00",
+    days:["Неделя","Понеделник","Вторник","Сряда","Четвъртък","Петък","Събота"]
+  },
+  ro:{
+    title:"Sousouro Creperie · Clătite în Salonic",
+    desc:"Clătite dulci și sărate, cafea și bere pe Gounari 24, Salonic. Deschis zilnic 08:00-02:00. Livrare și la pachet.",
+    langLabel:"Limba",
+    navLabel:"Meniu principal", navSig:"Clătitele casei", navMenu:"Meniu", navBuild:"Fă-ți clătita", navVisit:"Unde suntem",
+    order:"Comandă", orderIt:"Comandă", del:"Livrare", take:"La pachet",
+    h1:"Clătite despre care <em>vorbește</em> toată lumea.",
+    lead:"Clătite dulci și sărate, cafea și bere rece pe Gounari 24. Deschis zilnic, de la 8 dimineața până la 2 noaptea.",
+    seeMenu:"Vezi meniul",
+    f1b:"08:00-02:00", f1s:"în fiecare zi", f2b:"De la €2,00", f2s:"clătita ta", f3b:"Gounari 24", f3s:"centrul Salonicului", f4b:"Livrare sau la pachet", f4s:"cum îți convine",
+    sigH:"Cele două Sousouro", sigP:"Cea dulce și cea sărată, care poartă numele nostru. Prima dată aici? Începe cu ele.",
+    sweet:"Dulce", salty:"Sărată", sigName:"Clătita Sousouro",
+    sigSweetP:"Caramel sărat, fulgi de sare de mare, Oreo sfărâmat și pralină Bueno deasupra.",
+    sigSaltyP:"Brânză afumată, bucăți crocante de pui, bacon, ciuperci și sosul nostru Sousouro.",
+    swipe:"Glisează ca s-o vezi și pe a doua.",
+    menuH:"Meniu", menuP:"Toate prețurile sunt în euro, cu TVA inclus.", catsLabel:"Categorii", searchLabel:"Caută în meniu", searchPh:"Caută în meniu, de ex. bacon",
+    all:"Toate", count:n => n + (n === 1 ? " produs" : " produse"), badge:"Specialitatea casei", from:"de la ", empty:"N-am găsit nimic. Încearcă alt cuvânt.",
+    buildH:"Fă-ți propria clătită", buildP:"Alege dulce sau sărată și pune ce-ți place.", kindLabel:"Tipul clătitei", ingLabel:"Ingrediente",
+    resSweet:"Clătita ta dulce", resSalty:"Clătita ta sărată", resEmpty:"Încă n-ai ales ingrediente.",
+    buildNote:"De la €2,00. Prețul final depinde de ingredientele alese.", ownSandwich:"Sandvișul tău", ownHotdog:"Hot dog-ul tău",
+    visitH:"Unde suntem", addrH:"Adresă", addr:"Dimitriou Gounari 24<br>Salonic 54621", phone:"Telefon:",
+    mapLabel:"Deschide locația noastră în Google Maps", directions:"Indicații de drum",
+    hoursH:"Program", hoursNote:"Livrare prin e-food de la 09:00, comandă minimă €6,00. Pentru la pachet, sună-ne sau treci pe la noi.",
+    footAddr:"Dimitriou Gounari 24, Salonic",
+    dlgH:"Cum o vrei?", close:"Închide",
+    dlgDel:"Comandă pe e-food și ți-o aducem la ușă. Comandă minimă €6,00.", openEfood:"Deschide e-food",
+    dlgTake:"Sună-ne și ți-o pregătim, sau treci pe la noi, pe Gounari 24.", call:"Sună: 698 748 9339",
+    openNow:"Deschis acum, până la 02:00", closedNow:"Închis acum, deschidem la 08:00", today:" (azi)", hoursRow:"08:00-02:00",
+    days:["Duminică","Luni","Marți","Miercuri","Joi","Vineri","Sâmbătă"]
+  },
+  sr:{
+    title:"Sousouro Creperie · Palačinke u Solunu",
+    desc:"Slatke i slane palačinke, kafa i pivo u ulici Gunari 24, Solun. Radimo svaki dan 08:00-02:00. Dostava i za poneti.",
+    langLabel:"Jezik",
+    navLabel:"Glavni meni", navSig:"Naši specijaliteti", navMenu:"Meni", navBuild:"Napravi svoju", navVisit:"Gde smo",
+    order:"Poruči", orderIt:"Poruči", del:"Dostava", take:"Za poneti",
+    h1:"Palačinke o kojima svi <em>pričaju</em>.",
+    lead:"Slatke i slane palačinke, kafa i hladno pivo u ulici Gunari 24. Radimo svaki dan, od 8 ujutru do 2 posle ponoći.",
+    seeMenu:"Pogledaj meni",
+    f1b:"08:00-02:00", f1s:"svaki dan", f2b:"Od €2,00", f2s:"tvoja palačinka", f3b:"Gunari 24", f3s:"centar Soluna", f4b:"Dostava ili za poneti", f4s:"kako ti odgovara",
+    sigH:"Dve Sousouro", sigP:"Slatka i slana koje nose naše ime. Prvi put si ovde? Počni od njih.",
+    sweet:"Slatka", salty:"Slana", sigName:"Palačinka Sousouro",
+    sigSweetP:"Slana karamela, morska so, mrvljeni Oreo i Bueno pralina odozgo.",
+    sigSaltyP:"Dimljeni sir, hrskavi pileći zalogaji, slanina, pečurke i naš Sousouro sos.",
+    swipe:"Prevuci da vidiš i drugu.",
+    menuH:"Meni", menuP:"Sve cene su u evrima, sa PDV-om.", catsLabel:"Kategorije", searchLabel:"Pretraži meni", searchPh:"Pretraži meni, npr. slanina",
+    all:"Sve", count:n => n + ((n % 10 === 1 && n % 100 !== 11) ? " stavka" : (n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? " stavke" : " stavki"),
+    badge:"Specijalitet", from:"od ", empty:"Ništa nismo našli. Probaj drugu reč.",
+    buildH:"Napravi svoju palačinku", buildP:"Izaberi slatku ili slanu i stavi šta voliš.", kindLabel:"Vrsta palačinke", ingLabel:"Sastojci",
+    resSweet:"Tvoja slatka palačinka", resSalty:"Tvoja slana palačinka", resEmpty:"Još nisi izabrao sastojke.",
+    buildNote:"Od €2,00. Konačna cena zavisi od sastojaka.", ownSandwich:"Tvoj sendvič", ownHotdog:"Tvoj hot dog",
+    visitH:"Gde smo", addrH:"Adresa", addr:"Dimitriu Gunari 24<br>Solun 54621", phone:"Telefon:",
+    mapLabel:"Otvori našu lokaciju u Google Maps", directions:"Uputstva za put",
+    hoursH:"Radno vreme", hoursNote:"Dostava preko e-food od 09:00, minimalna porudžbina €6,00. Za poneti nas pozovi ili svrati.",
+    footAddr:"Dimitriu Gunari 24, Solun",
+    dlgH:"Kako želiš?", close:"Zatvori",
+    dlgDel:"Poruči preko e-food i donosimo ti na vrata. Minimalna porudžbina €6,00.", openEfood:"Otvori e-food",
+    dlgTake:"Pozovi nas da spremimo, ili samo svrati u radnju u Gunari 24.", call:"Pozovi: 698 748 9339",
+    openNow:"Otvoreno sada, do 02:00", closedNow:"Zatvoreno, otvaramo u 08:00", today:" (danas)", hoursRow:"08:00-02:00",
+    days:["Nedelja","Ponedeljak","Utorak","Sreda","Četvrtak","Petak","Subota"]
+  },
+  de:{
+    title:"Sousouro Creperie · Crêpes in Thessaloniki",
+    desc:"Süße und herzhafte Crêpes, Kaffee und Bier in der Gounari 24, Thessaloniki. Täglich 08:00-02:00 geöffnet. Lieferung und zum Mitnehmen.",
+    langLabel:"Sprache",
+    navLabel:"Hauptmenü", navSig:"Hausspezialitäten", navMenu:"Speisekarte", navBuild:"Selbst zusammenstellen", navVisit:"So findest du uns",
+    order:"Bestellen", orderIt:"Bestellen", del:"Lieferung", take:"Zum Mitnehmen",
+    h1:"Crêpes, über die alle <em>reden</em>.",
+    lead:"Süße und herzhafte Crêpes, Kaffee und kaltes Bier in der Gounari 24. Täglich geöffnet, von 8 Uhr morgens bis 2 Uhr nachts.",
+    seeMenu:"Zur Speisekarte",
+    f1b:"08:00-02:00", f1s:"jeden Tag", f2b:"Ab €2,00", f2s:"dein eigener Crêpe", f3b:"Gounari 24", f3s:"Zentrum von Thessaloniki", f4b:"Lieferung oder zum Mitnehmen", f4s:"wie es dir passt",
+    sigH:"Unsere zwei Sousouro", sigP:"Der süße und der herzhafte, die unseren Namen tragen. Zum ersten Mal hier? Fang mit diesen an.",
+    sweet:"Süß", salty:"Herzhaft", sigName:"Sousouro-Crêpe",
+    sigSweetP:"Gesalzenes Karamell, Meersalzflocken, zerbröselte Oreos und obendrauf Bueno-Praliné.",
+    sigSaltyP:"Räucherkäse, knusprige Hähnchenstücke, Bacon, Pilze und unsere Sousouro-Sauce.",
+    swipe:"Wische, um den zweiten zu sehen.",
+    menuH:"Speisekarte", menuP:"Alle Preise in Euro, inkl. MwSt.", catsLabel:"Kategorien", searchLabel:"Speisekarte durchsuchen", searchPh:"Suchen, z. B. Bacon",
+    all:"Alle", count:n => n + " Artikel", badge:"Spezialität", from:"ab ", empty:"Nichts gefunden. Versuch ein anderes Wort.",
+    buildH:"Stell dir deinen Crêpe zusammen", buildP:"Wähl süß oder herzhaft und füll ihn mit allem, was du magst.", kindLabel:"Crêpe-Art", ingLabel:"Zutaten",
+    resSweet:"Dein süßer Crêpe", resSalty:"Dein herzhafter Crêpe", resEmpty:"Noch keine Zutaten gewählt.",
+    buildNote:"Ab €2,00. Der Endpreis hängt von den Zutaten ab.", ownSandwich:"Dein eigenes Sandwich", ownHotdog:"Dein eigener Hotdog",
+    visitH:"So findest du uns", addrH:"Adresse", addr:"Dimitriou Gounari 24<br>54621 Thessaloniki", phone:"Telefon:",
+    mapLabel:"Unseren Standort in Google Maps öffnen", directions:"Route anzeigen",
+    hoursH:"Öffnungszeiten", hoursNote:"Lieferung über e-food ab 09:00, Mindestbestellwert €6,00. Zum Mitnehmen ruf uns an oder komm einfach vorbei.",
+    footAddr:"Dimitriou Gounari 24, Thessaloniki",
+    dlgH:"Wie möchtest du bestellen?", close:"Schließen",
+    dlgDel:"Bestell über e-food und wir bringen es bis vor deine Tür. Mindestbestellwert €6,00.", openEfood:"e-food öffnen",
+    dlgTake:"Ruf uns an, dann ist alles fertig, oder komm einfach in den Laden in der Gounari 24.", call:"Anrufen: 698 748 9339",
+    openNow:"Jetzt geöffnet, bis 02:00", closedNow:"Jetzt geschlossen, wir öffnen um 08:00", today:" (heute)", hoursRow:"08:00-02:00",
+    days:["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"]
+  },
+  it:{
+    title:"Sousouro Creperie · Crêpes a Salonicco",
+    desc:"Crêpes dolci e salate, caffè e birra in via Gounari 24, Salonicco. Aperti tutti i giorni 08:00-02:00. Consegna e asporto.",
+    langLabel:"Lingua",
+    navLabel:"Menu principale", navSig:"Le nostre crêpes", navMenu:"Menu", navBuild:"Crea la tua", navVisit:"Dove siamo",
+    order:"Ordina", orderIt:"Ordina", del:"Consegna", take:"Da asporto",
+    h1:"Crêpes di cui <em>parlano</em> tutti.",
+    lead:"Crêpes dolci e salate, caffè e birra fresca in via Gounari 24. Aperti tutti i giorni, dalle 8 del mattino alle 2 di notte.",
+    seeMenu:"Guarda il menu",
+    f1b:"08:00-02:00", f1s:"tutti i giorni", f2b:"Da €2,00", f2s:"la tua crêpe", f3b:"Gounari 24", f3s:"centro di Salonicco", f4b:"Consegna o da asporto", f4s:"come preferisci",
+    sigH:"Le due Sousouro", sigP:"La dolce e la salata che portano il nostro nome. Prima volta qui? Inizia da queste.",
+    sweet:"Dolce", salty:"Salata", sigName:"Crêpe Sousouro",
+    sigSweetP:"Caramello salato, fiocchi di sale marino, Oreo sbriciolati e sopra pralinato Bueno.",
+    sigSaltyP:"Formaggio affumicato, bocconcini di pollo croccanti, bacon, funghi e la nostra salsa Sousouro.",
+    swipe:"Scorri per vedere anche la seconda.",
+    menuH:"Menu", menuP:"Tutti i prezzi in euro, IVA inclusa.", catsLabel:"Categorie", searchLabel:"Cerca nel menu", searchPh:"Cerca nel menu, es. funghi",
+    all:"Tutto", count:n => n + (n === 1 ? " prodotto" : " prodotti"), badge:"Della casa", from:"da ", empty:"Non abbiamo trovato niente. Prova con un'altra parola.",
+    buildH:"Crea la tua crêpe", buildP:"Scegli dolce o salata e mettici quello che ti piace.", kindLabel:"Tipo di crêpe", ingLabel:"Ingredienti",
+    resSweet:"La tua crêpe dolce", resSalty:"La tua crêpe salata", resEmpty:"Non hai ancora scelto ingredienti.",
+    buildNote:"Da €2,00. Il prezzo finale dipende dagli ingredienti.", ownSandwich:"Il tuo panino", ownHotdog:"Il tuo hot dog",
+    visitH:"Dove siamo", addrH:"Indirizzo", addr:"Dimitriou Gounari 24<br>54621 Salonicco", phone:"Telefono:",
+    mapLabel:"Apri la nostra posizione su Google Maps", directions:"Indicazioni stradali",
+    hoursH:"Orari", hoursNote:"Consegna tramite e-food dalle 09:00, ordine minimo €6,00. Per l'asporto chiamaci o passa da noi.",
+    footAddr:"Dimitriou Gounari 24, Salonicco",
+    dlgH:"Come preferisci?", close:"Chiudi",
+    dlgDel:"Ordina su e-food e te la portiamo a casa. Ordine minimo €6,00.", openEfood:"Apri e-food",
+    dlgTake:"Chiamaci e te la prepariamo, oppure passa in negozio in via Gounari 24.", call:"Chiama: 698 748 9339",
+    openNow:"Aperto ora, fino alle 02:00", closedNow:"Chiuso ora, apriamo alle 08:00", today:" (oggi)", hoursRow:"08:00-02:00",
+    days:["Domenica","Lunedì","Martedì","Mercoledì","Giovedì","Venerdì","Sabato"]
+  },
+  he:{
+    title:"Sousouro Creperie · קרפים בסלוניקי",
+    desc:"קרפים מתוקים ומלוחים, קפה ובירה ברחוב גונארי 24, סלוניקי. פתוח כל יום 08:00-02:00. משלוח ואיסוף עצמי.",
+    langLabel:"שפה",
+    navLabel:"תפריט ראשי", navSig:"קרפי הדגל", navMenu:"תפריט", navBuild:"הרכבה עצמית", navVisit:"איפה אנחנו",
+    order:"להזמנה", orderIt:"להזמנה", del:"משלוח", take:"איסוף עצמי",
+    h1:"קרפים שכולם <em>מדברים</em> עליהם.",
+    lead:"קרפים מתוקים ומלוחים, קפה ובירה קרה ברחוב גונארי 24. פתוח כל יום, מ-8 בבוקר עד 2 בלילה.",
+    seeMenu:"לתפריט",
+    f1b:"08:00-02:00", f1s:"כל יום", f2b:"החל מ-€2.00", f2s:"קרפ בהרכבה שלכם", f3b:"גונארי 24", f3s:"מרכז סלוניקי", f4b:"משלוח או איסוף עצמי", f4s:"איך שנוח לכם",
+    sigH:"שני קרפי הדגל שלנו", sigP:"המתוק והמלוח שנושאים את השם שלנו. פעם ראשונה כאן? תתחילו מהם.",
+    sweet:"מתוק", salty:"מלוח", sigName:"קרפ Sousouro",
+    sigSweetP:"קרמל מלוח, פתיתי מלח ים, אוראו מפורר ומעל פרלין Bueno.",
+    sigSaltyP:"גבינה מעושנת, נתחי עוף פריכים, בייקון, פטריות ורוטב Sousouro שלנו.",
+    swipe:"החליקו כדי לראות את השני.",
+    menuH:"תפריט", menuP:"כל המחירים באירו, כולל מע\"מ.", catsLabel:"קטגוריות", searchLabel:"חיפוש בתפריט", searchPh:"חיפוש בתפריט, למשל פטריות",
+    all:"הכול", count:n => n + (n === 1 ? " פריט" : " פריטים"), badge:"מנת הבית", from:"החל מ-", empty:"לא מצאנו כלום. נסו מילה אחרת.",
+    buildH:"הרכיבו קרפ משלכם", buildP:"בחרו מתוק או מלוח ושימו בפנים מה שאתם אוהבים.", kindLabel:"סוג הקרפ", ingLabel:"מרכיבים",
+    resSweet:"הקרפ המתוק שלכם", resSalty:"הקרפ המלוח שלכם", resEmpty:"עוד לא בחרתם מרכיבים.",
+    buildNote:"החל מ-€2.00. המחיר הסופי לפי המרכיבים.", ownSandwich:"כריך בהרכבה שלכם", ownHotdog:"הוט דוג בהרכבה שלכם",
+    visitH:"איפה אנחנו", addrH:"כתובת", addr:"Dimitriou Gounari 24<br>Thessaloniki 54621", phone:"טלפון:",
+    mapLabel:"פתחו את המיקום שלנו ב-Google Maps", directions:"הוראות הגעה",
+    hoursH:"שעות פתיחה", hoursNote:"משלוחים דרך e-food מ-09:00, הזמנה מינימלית €6.00. לאיסוף עצמי התקשרו אלינו או קפצו לחנות.",
+    footAddr:"Dimitriou Gounari 24, Thessaloniki",
+    dlgH:"איך תרצו לקבל?", close:"סגירה",
+    dlgDel:"הזמינו ב-e-food ואנחנו מביאים עד הדלת. הזמנה מינימלית €6.00.", openEfood:"לפתיחת e-food",
+    dlgTake:"התקשרו ונכין לכם מראש, או פשוט קפצו לחנות ברחוב גונארי 24.", call:"התקשרו: 698 748 9339",
+    openNow:"פתוח עכשיו, עד 02:00", closedNow:"סגור עכשיו, נפתח ב-08:00", today:" (היום)", hoursRow:"08:00-02:00",
+    days:["ראשון","שני","שלישי","רביעי","חמישי","שישי","שבת"]
+  }
+};
+
+/* category names */
+const CATS = {
+  sweet:{el:"Γλυκές κρέπες",en:"Sweet crepes",tr:"Tatlı krepler",bg:"Сладки палачинки",ro:"Clătite dulci",sr:"Slatke palačinke",de:"Süße Crêpes",it:"Crêpes dolci",he:"קרפים מתוקים"},
+  salty:{el:"Αλμυρές κρέπες",en:"Savoury crepes",tr:"Tuzlu krepler",bg:"Солени палачинки",ro:"Clătite sărate",sr:"Slane palačinke",de:"Herzhafte Crêpes",it:"Crêpes salate",he:"קרפים מלוחים"},
+  own:{el:"Φτιάξε τη δική σου",en:"Build your own",tr:"Kendin yap",bg:"Направи си сам",ro:"Fă-ți singur",sr:"Napravi sam",de:"Selbst zusammenstellen",it:"Crea la tua",he:"הרכבה עצמית"},
+  coffee:{el:"Καφέδες",en:"Coffee",tr:"Kahveler",bg:"Кафе",ro:"Cafea",sr:"Kafa",de:"Kaffee",it:"Caffè",he:"קפה"},
+  juice:{el:"Χυμοί",en:"Juices",tr:"Meyve suları",bg:"Сокове",ro:"Sucuri",sr:"Sokovi",de:"Säfte",it:"Succhi",he:"מיצים"},
+  soft:{el:"Αναψυκτικά & νερό",en:"Soft drinks & water",tr:"Meşrubat ve su",bg:"Безалкохолни и вода",ro:"Răcoritoare și apă",sr:"Sokovi i voda",de:"Softdrinks & Wasser",it:"Bibite e acqua",he:"משקאות קלים ומים"},
+  beer:{el:"Μπύρες",en:"Beer",tr:"Biralar",bg:"Бира",ro:"Bere",sr:"Pivo",de:"Bier",it:"Birre",he:"בירות"}
+};
+
+/* menu items: id, price, special, "from" price, and Greek / English name and description */
+const MENU = [
+  {cat:"sweet", items:[
+    {id:"plateia", p:5, el:["Κρέπα γλυκιά Πλατεία","Nucrema, φράουλα, μπισκότο Πτι-Μπερ και λευκή σοκολάτα από πάνω."], en:["Plateia sweet crepe","Nucrema, strawberries, Petit-Beurre biscuit, topped with white chocolate."]},
+    {id:"sousw", p:5, star:1, el:["Κρέπα γλυκιά Σούσουρο","Αλατισμένη καραμέλα, άνθος αλατιού, τριμμένο Oreo και πραλίνα Bueno από πάνω."], en:["Sousouro sweet crepe","Salted caramel, sea salt flakes, crushed Oreo, topped with Bueno praline."]}
+  ]},
+  {cat:"salty", items:[
+    {id:"gian", p:6, el:["Κρέπα Γιαννιώτικη","Κασέρι, κοτομπουκιές, πατάτες τηγανητές και ουγγαρέζα."], en:["Giannena-style crepe","Kasseri cheese, chicken nuggets, fries and Hungarian-style sauce."]},
+    {id:"volos", p:6.5, el:["Κρέπα Βολιώτικη","Κασέρι, κοτομπουκιές, μπέικον, πατάτες τηγανητές και σος μουστάρδας."], en:["Volos-style crepe","Kasseri cheese, chicken nuggets, bacon, fries and mustard sauce."]},
+    {id:"navar", p:7, el:["Κρέπα Ναυαρίνου","Καπνιστό κασέρι, κοτόπουλο σε λωρίδες, καπνιστή πανσέτα και σος κηπουρού."], en:["Navarinou crepe","Smoked kasseri cheese, chicken strips, smoked pancetta and creamy garden sauce."]},
+    {id:"sousa", p:7, star:1, el:["Κρέπα αλμυρή Σούσουρο","Καπνιστό τυρί, κοτοκριτσίνι, μπέικον, μανιτάρια και σος Σούσουρο."], en:["Sousouro savoury crepe","Smoked cheese, crispy chicken bites, bacon, mushrooms and Sousouro sauce."]}
+  ]},
+  {cat:"own", items:[
+    {id:"ownsa", p:2, from:1, own:1, el:["Δική σου αλμυρή κρέπα"], en:["Your own savoury crepe"]},
+    {id:"ownsw", p:2, from:1, own:1, el:["Δική σου γλυκιά κρέπα"], en:["Your own sweet crepe"]},
+    {id:"ownsand", p:1.7, from:1, own:1, el:["Δικό σου sandwich"], en:["Your own sandwich"]},
+    {id:"ownhd", p:3, from:1, own:1, el:["Δικό σου hot dog"], en:["Your own hot dog"]}
+  ]},
+  {cat:"coffee", items:[
+    {id:"greek", p:0.8, el:["Ελληνικός"], en:["Greek coffee"]},
+    {id:"espresso", p:1.5, el:["Espresso"]},
+    {id:"nes", p:1.5, el:["Nes"], en:["Nescafé"]},
+    {id:"frappe", p:1.5, el:["Frappe"], en:["Frappé"]},
+    {id:"americano", p:2, el:["Espresso americano"]},
+    {id:"fesp", p:2.2, el:["Freddo espresso"]},
+    {id:"capp", p:2.5, el:["Cappuccino"]},
+    {id:"fcapp", p:2.5, el:["Freddo cappuccino"]},
+    {id:"capplatte", p:2.6, el:["Cappuccino latte"]},
+    {id:"icedlatte", p:2.6, el:["Iced latte"]}
+  ]},
+  {cat:"juice", items:[
+    {id:"lemonade", p:3.5, el:["Jusy λεμονάδα"], en:["Jusy lemonade"]},
+    {id:"strawlem", p:3.5, el:["Jusy φράουλα & λεμόνι"], en:["Jusy strawberry & lemon"]},
+    {id:"nine", p:3.5, el:["Jusy λεμονάδα με 9 ελληνικά φρούτα"], en:["Jusy lemonade with 9 Greek fruits"]},
+    {id:"applepom", p:3.5, el:["Jusy πράσινο μήλο & ρόδι"], en:["Jusy green apple & pomegranate"]},
+    {id:"berry", p:3.5, el:["Jusy βατόμουρα & βύσσινο"], en:["Jusy blackberry & sour cherry"]},
+    {id:"grapefruit", p:3.5, el:["Jusy grapefruit"]},
+    {id:"peach", p:3.5, el:["Jusy ροδάκινο"], en:["Jusy peach"]}
+  ]},
+  {cat:"soft", items:[
+    {id:"pepsi", p:2, el:["Pepsi 330ml"]}, {id:"pepsimax", p:2, el:["Pepsi Max 330ml"]}, {id:"pepsitwist", p:2, el:["Pepsi Twist 330ml"]}, {id:"7up", p:2, el:["7up 330ml"]},
+    {id:"ivired", p:2, el:["Ήβη κόκκινη 330ml"], en:["Ivi sparkling orange 330ml"]},
+    {id:"iviblue", p:2, el:["Ήβη μπλε 330ml"], en:["Ivi still orange 330ml"]},
+    {id:"ivilemon", p:2, el:["Ήβη λεμόνι 330ml"], en:["Ivi lemon 330ml"]},
+    {id:"ivipink", p:2, el:["Ήβη pink grapefruit 330ml"], en:["Ivi pink grapefruit 330ml"]},
+    {id:"ivisoda", p:2, el:["Ήβη σόδα 330ml"], en:["Ivi soda 330ml"]},
+    {id:"water500", p:0.5, el:["Νερό ΙΟΛΗ 500ml"], en:["IOLI water 500ml"]},
+    {id:"water15", p:1.8, el:["Νερό ΙΟΛΗ 1,5lt"], en:["IOLI water 1.5L"]}
+  ]},
+  {cat:"beer", items:[
+    {id:"heineken", p:2.5, el:["Heineken 330ml"]}, {id:"heineken0", p:2.5, el:["Heineken 0.0 330ml"]},
+    {id:"alfa", p:2.5, el:["Άλφα 330ml"], en:["Alfa 330ml"]}, {id:"fischer", p:2.5, el:["Fischer 330ml"]},
+    {id:"mamos", p:2.5, el:["Μάμος 330ml"], en:["Mamos 330ml"]}, {id:"nymfi", p:2.5, el:["Νύμφη 330ml"], en:["Nymfi 330ml"]},
+    {id:"radler", p:2.5, el:["Amstel Radler 330ml"]}, {id:"sol", p:4, el:["Sol 330ml"]}
+  ]}
+];
+
+const OWN_DESC = {
+  el:"Βάζεις ό,τι υλικά θέλεις. Η τιμή βγαίνει από τα υλικά.",
+  en:"Add any fillings you like. The price depends on what you add.",
+  tr:"İstediğin malzemeleri ekle. Fiyat seçtiklerine göre belirlenir.",
+  bg:"Сложи каквито съставки искаш. Цената зависи от тях.",
+  ro:"Pune ce ingrediente vrei. Prețul depinde de ce alegi.",
+  sr:"Stavi sastojke koje želiš. Cena zavisi od izbora.",
+  de:"Wähl die Zutaten, die du magst. Der Preis hängt davon ab.",
+  it:"Scegli gli ingredienti che vuoi. Il prezzo dipende da quelli che scegli.",
+  he:"בחרו את המרכיבים שאתם אוהבים. המחיר לפי הבחירה."
+};
+
+/* item names and descriptions for the other languages; anything missing falls back to English */
+const XL = {
+  tr:{
+    plateia:["Plateia tatlı krep","Nucrema, çilek, Petit-Beurre bisküvi ve üzerinde beyaz çikolata."],
+    sousw:["Sousouro tatlı krep","Tuzlu karamel, deniz tuzu, ezilmiş Oreo ve üzerinde Bueno pralin."],
+    gian:["Yanya usulü krep","Kaşar, tavuk nugget, patates kızartması ve Macar usulü sos."],
+    volos:["Volos usulü krep","Kaşar, tavuk nugget, bacon, patates kızartması ve hardal sos."],
+    navar:["Navarinou krep","Füme kaşar, şerit tavuk, füme pancetta ve kremalı bahçe sosu."],
+    sousa:["Sousouro tuzlu krep","Füme peynir, çıtır tavuk, bacon, mantar ve Sousouro sosu."],
+    ownsa:["Kendi tuzlu krebin"], ownsw:["Kendi tatlı krebin"], ownsand:["Kendi sandviçin"], ownhd:["Kendi hot dog'un"],
+    greek:["Yunan kahvesi"], lemonade:["Jusy limonata"], strawlem:["Jusy çilek & limon"], nine:["Jusy 9 Yunan meyveli limonata"],
+    applepom:["Jusy yeşil elma & nar"], berry:["Jusy böğürtlen & vişne"], grapefruit:["Jusy greyfurt"], peach:["Jusy şeftali"],
+    ivired:["Ivi gazlı portakal 330ml"], iviblue:["Ivi gazsız portakal 330ml"], ivilemon:["Ivi limon 330ml"], ivipink:["Ivi pembe greyfurt 330ml"], ivisoda:["Ivi soda 330ml"],
+    water500:["IOLI su 500ml"], water15:["IOLI su 1,5L"]
+  },
+  bg:{
+    plateia:["Сладка палачинка Платия","Nucrema, ягоди, бисквити Петибър и бял шоколад отгоре."],
+    sousw:["Сладка палачинка Sousouro","Солен карамел, морска сол, натрошени Oreo и пралина Bueno отгоре."],
+    gian:["Палачинка Янина","Кашкавал, пилешки хапки, пържени картофи и унгарски сос."],
+    volos:["Палачинка Волос","Кашкавал, пилешки хапки, бекон, пържени картофи и сос с горчица."],
+    navar:["Палачинка Наварину","Пушен кашкавал, пилешки ленти, пушена панчета и кремообразен градински сос."],
+    sousa:["Солена палачинка Sousouro","Пушено сирене, хрупкави пилешки хапки, бекон, гъби и сос Sousouro."],
+    ownsa:["Твоя солена палачинка"], ownsw:["Твоя сладка палачинка"], ownsand:["Твоят сандвич"], ownhd:["Твоят хот-дог"],
+    greek:["Гръцко кафе"], lemonade:["Jusy лимонада"], strawlem:["Jusy ягода и лимон"], nine:["Jusy лимонада с 9 гръцки плода"],
+    applepom:["Jusy зелена ябълка и нар"], berry:["Jusy къпина и вишна"], grapefruit:["Jusy грейпфрут"], peach:["Jusy праскова"],
+    ivired:["Ivi газирана портокалова 330ml"], iviblue:["Ivi негазирана портокалова 330ml"], ivilemon:["Ivi лимон 330ml"], ivipink:["Ivi розов грейпфрут 330ml"], ivisoda:["Ivi сода 330ml"],
+    water500:["Вода IOLI 500ml"], water15:["Вода IOLI 1,5L"]
+  },
+  ro:{
+    plateia:["Clătită dulce Plateia","Nucrema, căpșuni, biscuiți Petit-Beurre și ciocolată albă deasupra."],
+    sousw:["Clătită dulce Sousouro","Caramel sărat, fulgi de sare de mare, Oreo sfărâmat și pralină Bueno deasupra."],
+    gian:["Clătită Ioannina","Cașcaval, nuggets de pui, cartofi prăjiți și sos unguresc."],
+    volos:["Clătită Volos","Cașcaval, nuggets de pui, bacon, cartofi prăjiți și sos de muștar."],
+    navar:["Clătită Navarinou","Cașcaval afumat, fâșii de pui, pancetta afumată și sos cremos de grădină."],
+    sousa:["Clătită sărată Sousouro","Brânză afumată, bucăți crocante de pui, bacon, ciuperci și sos Sousouro."],
+    ownsa:["Clătita ta sărată"], ownsw:["Clătita ta dulce"], ownsand:["Sandvișul tău"], ownhd:["Hot dog-ul tău"],
+    greek:["Cafea grecească"], lemonade:["Jusy limonadă"], strawlem:["Jusy căpșuni și lămâie"], nine:["Jusy limonadă cu 9 fructe grecești"],
+    applepom:["Jusy măr verde și rodie"], berry:["Jusy mure și vișine"], grapefruit:["Jusy grepfrut"], peach:["Jusy piersică"],
+    ivired:["Ivi portocală carbogazoasă 330ml"], iviblue:["Ivi portocală necarbogazoasă 330ml"], ivilemon:["Ivi lămâie 330ml"], ivipink:["Ivi grepfrut roz 330ml"], ivisoda:["Ivi sifon 330ml"],
+    water500:["Apă IOLI 500ml"], water15:["Apă IOLI 1,5L"]
+  },
+  sr:{
+    plateia:["Slatka palačinka Platia","Nucrema, jagode, Petit-Beurre keks i bela čokolada odozgo."],
+    sousw:["Slatka palačinka Sousouro","Slana karamela, morska so, mrvljeni Oreo i Bueno pralina odozgo."],
+    gian:["Palačinka Janjina","Kačkavalj, pileći nagetsi, pomfrit i mađarski sos."],
+    volos:["Palačinka Volos","Kačkavalj, pileći nagetsi, slanina, pomfrit i sos od senfa."],
+    navar:["Palačinka Navarinu","Dimljeni kačkavalj, pileće trake, dimljena pančeta i kremasti baštenski sos."],
+    sousa:["Slana palačinka Sousouro","Dimljeni sir, hrskavi pileći zalogaji, slanina, pečurke i Sousouro sos."],
+    ownsa:["Tvoja slana palačinka"], ownsw:["Tvoja slatka palačinka"], ownsand:["Tvoj sendvič"], ownhd:["Tvoj hot dog"],
+    greek:["Grčka kafa"], lemonade:["Jusy limunada"], strawlem:["Jusy jagoda i limun"], nine:["Jusy limunada sa 9 grčkih voćki"],
+    applepom:["Jusy zelena jabuka i nar"], berry:["Jusy kupina i višnja"], grapefruit:["Jusy grejpfrut"], peach:["Jusy breskva"],
+    ivired:["Ivi gazirana pomorandža 330ml"], iviblue:["Ivi negazirana pomorandža 330ml"], ivilemon:["Ivi limun 330ml"], ivipink:["Ivi roze grejpfrut 330ml"], ivisoda:["Ivi soda 330ml"],
+    water500:["Voda IOLI 500ml"], water15:["Voda IOLI 1,5L"]
+  },
+  de:{
+    plateia:["Süßer Crêpe Plateia","Nucrema, Erdbeeren, Petit-Beurre-Keks und obendrauf weiße Schokolade."],
+    sousw:["Süßer Crêpe Sousouro","Gesalzenes Karamell, Meersalzflocken, zerbröselte Oreos und obendrauf Bueno-Praliné."],
+    gian:["Crêpe nach Ioannina-Art","Kasseri-Käse, Chicken Nuggets, Pommes und ungarische Sauce."],
+    volos:["Crêpe nach Volos-Art","Kasseri-Käse, Chicken Nuggets, Bacon, Pommes und Senfsauce."],
+    navar:["Crêpe Navarinou","Geräucherter Kasseri, Hähnchenstreifen, geräucherte Pancetta und cremige Gartensauce."],
+    sousa:["Herzhafter Crêpe Sousouro","Räucherkäse, knusprige Hähnchenstücke, Bacon, Pilze und Sousouro-Sauce."],
+    ownsa:["Dein herzhafter Crêpe"], ownsw:["Dein süßer Crêpe"], ownsand:["Dein Sandwich"], ownhd:["Dein Hotdog"],
+    greek:["Griechischer Kaffee"], lemonade:["Jusy Limonade"], strawlem:["Jusy Erdbeere & Zitrone"], nine:["Jusy Limonade mit 9 griechischen Früchten"],
+    applepom:["Jusy grüner Apfel & Granatapfel"], berry:["Jusy Brombeere & Sauerkirsche"], grapefruit:["Jusy Grapefruit"], peach:["Jusy Pfirsich"],
+    ivired:["Ivi Orange mit Kohlensäure 330ml"], iviblue:["Ivi Orange ohne Kohlensäure 330ml"], ivilemon:["Ivi Zitrone 330ml"], ivipink:["Ivi Pink Grapefruit 330ml"], ivisoda:["Ivi Soda 330ml"],
+    water500:["IOLI Wasser 500ml"], water15:["IOLI Wasser 1,5L"]
+  },
+  it:{
+    plateia:["Crêpe dolce Plateia","Nucrema, fragole, biscotto Petit-Beurre e sopra cioccolato bianco."],
+    sousw:["Crêpe dolce Sousouro","Caramello salato, fiocchi di sale marino, Oreo sbriciolati e sopra pralinato Bueno."],
+    gian:["Crêpe alla Giannina","Formaggio kasseri, nuggets di pollo, patatine fritte e salsa all'ungherese."],
+    volos:["Crêpe alla Volos","Formaggio kasseri, nuggets di pollo, bacon, patatine fritte e salsa alla senape."],
+    navar:["Crêpe Navarinou","Kasseri affumicato, straccetti di pollo, pancetta affumicata e salsa cremosa dell'orto."],
+    sousa:["Crêpe salata Sousouro","Formaggio affumicato, bocconcini di pollo croccanti, bacon, funghi e salsa Sousouro."],
+    ownsa:["La tua crêpe salata"], ownsw:["La tua crêpe dolce"], ownsand:["Il tuo panino"], ownhd:["Il tuo hot dog"],
+    greek:["Caffè greco"], lemonade:["Jusy limonata"], strawlem:["Jusy fragola e limone"], nine:["Jusy limonata con 9 frutti greci"],
+    applepom:["Jusy mela verde e melograno"], berry:["Jusy mora e amarena"], grapefruit:["Jusy pompelmo"], peach:["Jusy pesca"],
+    ivired:["Ivi aranciata frizzante 330ml"], iviblue:["Ivi aranciata naturale 330ml"], ivilemon:["Ivi limone 330ml"], ivipink:["Ivi pompelmo rosa 330ml"], ivisoda:["Ivi soda 330ml"],
+    water500:["Acqua IOLI 500ml"], water15:["Acqua IOLI 1,5L"]
+  },
+  he:{
+    plateia:["קרפ מתוק פלטיה","Nucrema, תותים, ביסקוויט פטי בר ומעל שוקולד לבן."],
+    sousw:["קרפ מתוק Sousouro","קרמל מלוח, פתיתי מלח ים, אוראו מפורר ומעל פרלין Bueno."],
+    gian:["קרפ בסגנון יואנינה","גבינת קשרי, נאגטס עוף, צ'יפס ורוטב הונגרי."],
+    volos:["קרפ בסגנון וולוס","גבינת קשרי, נאגטס עוף, בייקון, צ'יפס ורוטב חרדל."],
+    navar:["קרפ נבארינו","קשרי מעושן, רצועות עוף, פנצ'טה מעושנת ורוטב גינה קרמי."],
+    sousa:["קרפ מלוח Sousouro","גבינה מעושנת, נתחי עוף פריכים, בייקון, פטריות ורוטב Sousouro."],
+    ownsa:["קרפ מלוח בהרכבה שלכם"], ownsw:["קרפ מתוק בהרכבה שלכם"], ownsand:["כריך בהרכבה שלכם"], ownhd:["הוט דוג בהרכבה שלכם"],
+    greek:["קפה יווני"], lemonade:["Jusy לימונדה"], strawlem:["Jusy תות ולימון"], nine:["Jusy לימונדה עם 9 פירות יווניים"],
+    applepom:["Jusy תפוח ירוק ורימון"], berry:["Jusy אוכמניות ודובדבן"], grapefruit:["Jusy אשכולית"], peach:["Jusy אפרסק"],
+    ivired:["Ivi תפוזים מוגז 330ml"], iviblue:["Ivi תפוזים לא מוגז 330ml"], ivilemon:["Ivi לימון 330ml"], ivipink:["Ivi אשכולית ורודה 330ml"], ivisoda:["Ivi סודה 330ml"],
+    water500:["מים IOLI 500ml"], water15:["מים IOLI 1.5L"]
+  }
+};
+
+const ING = {
+  sweet:{
+    el:["Nucrema","Φράουλα","Μπισκότο Πτι-Μπερ","Oreo","Λευκή σοκολάτα","Αλατισμένη καραμέλα","Πραλίνα Bueno","Άνθος αλατιού"],
+    en:["Nucrema","Strawberry","Petit-Beurre biscuit","Oreo","White chocolate","Salted caramel","Bueno praline","Sea salt flakes"],
+    tr:["Nucrema","Çilek","Petit-Beurre bisküvi","Oreo","Beyaz çikolata","Tuzlu karamel","Bueno pralin","Deniz tuzu"],
+    bg:["Nucrema","Ягоди","Бисквити Петибър","Oreo","Бял шоколад","Солен карамел","Пралина Bueno","Морска сол"],
+    ro:["Nucrema","Căpșuni","Biscuiți Petit-Beurre","Oreo","Ciocolată albă","Caramel sărat","Pralină Bueno","Sare de mare"],
+    sr:["Nucrema","Jagode","Petit-Beurre keks","Oreo","Bela čokolada","Slana karamela","Bueno pralina","Morska so"],
+    de:["Nucrema","Erdbeeren","Petit-Beurre-Keks","Oreo","Weiße Schokolade","Gesalzenes Karamell","Bueno-Praliné","Meersalzflocken"],
+    it:["Nucrema","Fragole","Biscotto Petit-Beurre","Oreo","Cioccolato bianco","Caramello salato","Pralinato Bueno","Sale marino"],
+    he:["Nucrema","תות","ביסקוויט פטי בר","אוראו","שוקולד לבן","קרמל מלוח","פרלין Bueno","פתיתי מלח ים"]
+  },
+  salty:{
+    el:["Κασέρι","Καπνιστό τυρί","Κοτόπουλο","Κοτομπουκιές","Μπέικον","Πανσέτα","Μανιτάρια","Πατάτες τηγανητές","Ουγγαρέζα","Σος μουστάρδας","Σος κηπουρού"],
+    en:["Kasseri cheese","Smoked cheese","Chicken","Chicken nuggets","Bacon","Pancetta","Mushrooms","Fries","Hungarian-style sauce","Mustard sauce","Garden sauce"],
+    tr:["Kaşar","Füme peynir","Tavuk","Tavuk nugget","Bacon","Pancetta","Mantar","Patates kızartması","Macar usulü sos","Hardal sos","Bahçe sosu"],
+    bg:["Кашкавал","Пушено сирене","Пиле","Пилешки хапки","Бекон","Панчета","Гъби","Пържени картофи","Унгарски сос","Сос с горчица","Градински сос"],
+    ro:["Cașcaval","Brânză afumată","Pui","Nuggets de pui","Bacon","Pancetta","Ciuperci","Cartofi prăjiți","Sos unguresc","Sos de muștar","Sos de grădină"],
+    sr:["Kačkavalj","Dimljeni sir","Piletina","Pileći nagetsi","Slanina","Pančeta","Pečurke","Pomfrit","Mađarski sos","Sos od senfa","Baštenski sos"],
+    de:["Kasseri-Käse","Räucherkäse","Hähnchen","Chicken Nuggets","Bacon","Pancetta","Pilze","Pommes","Ungarische Sauce","Senfsauce","Gartensauce"],
+    it:["Formaggio kasseri","Formaggio affumicato","Pollo","Nuggets di pollo","Bacon","Pancetta","Funghi","Patatine fritte","Salsa all'ungherese","Salsa alla senape","Salsa dell'orto"],
+    he:["גבינת קשרי","גבינה מעושנת","עוף","נאגטס עוף","בייקון","פנצ'טה","פטריות","צ'יפס","רוטב הונגרי","רוטב חרדל","רוטב גינה"]
+  }
+};
+
+let lang = "el";
+const t = k => T[lang][k] != null ? T[lang][k] : T.en[k];
+const eur = n => "€" + (COMMA[lang] ? n.toFixed(2).replace(".", ",") : n.toFixed(2));
+function itemText(i){
+  const x = (XL[lang] && XL[lang][i.id]) || null;
+  let name, desc;
+  if (lang === "el"){ name = i.el[0]; desc = i.el[1] || ""; }
+  else if (x){ name = x[0]; desc = x[1] || ""; }
+  else { const e = i.en || i.el; name = e[0]; desc = (i.en && i.en[1]) || ""; }
+  if (i.own) desc = OWN_DESC[lang];
+  return [name, desc];
+}
+
+/* menu */
+const chipsEl = document.getElementById("chips"), listEl = document.getElementById("menuList"), qEl = document.getElementById("q");
+let activeCat = -1;
+function renderChips(){
+  chipsEl.innerHTML = "";
+  [-1, ...MENU.map((_, i) => i)].forEach(idx => {
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "chip"; b.textContent = idx < 0 ? t("all") : CATS[MENU[idx].cat][lang];
+    b.setAttribute("aria-pressed", String(idx === activeCat));
+    b.addEventListener("click", () => { activeCat = idx; renderChips(); renderMenu(); if (listEl.getBoundingClientRect().top < 0) listEl.scrollIntoView({block:"start"}); });
+    chipsEl.appendChild(b);
+  });
+}
+function norm(s){ return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""); }
+function renderMenu(){
+  const q = norm(qEl.value.trim());
+  listEl.innerHTML = "";
+  let shown = 0;
+  MENU.forEach((c, ci) => {
+    if (activeCat >= 0 && ci !== activeCat) return;
+    const rows = c.items.map(i => [i, itemText(i)]).filter(([i, tx]) => !q || norm(tx.join(" ") + " " + i.el.join(" ")).includes(q));
+    if (!rows.length) return;
+    shown += rows.length;
+    const box = document.createElement("div"); box.className = "cat";
+    const h = document.createElement("h3"); h.textContent = CATS[c.cat][lang];
+    const sm = document.createElement("small"); sm.textContent = t("count")(rows.length);
+    h.appendChild(sm); box.appendChild(h);
+    const grid = document.createElement("div"); grid.className = "items";
+    rows.forEach(([i, [name, desc]]) => {
+      const it = document.createElement("div"); it.className = "item";
+      const n = document.createElement("div"); n.className = "name"; n.textContent = name;
+      if (i.star){ const b = document.createElement("span"); b.className = "badge"; b.textContent = t("badge"); n.appendChild(b); }
+      const p = document.createElement("div"); p.className = "p"; p.textContent = (i.from ? t("from") : "") + eur(i.p);
+      it.append(n, p);
+      if (desc){ const d = document.createElement("p"); d.className = "desc"; d.textContent = desc; it.appendChild(d); }
+      grid.appendChild(it);
+    });
+    box.appendChild(grid); listEl.appendChild(box);
+  });
+  if (!shown){ const e = document.createElement("p"); e.className = "empty"; e.textContent = t("empty"); listEl.appendChild(e); }
+}
+qEl.addEventListener("input", renderMenu);
+
+/* builder */
+let kind = "sweet"; const picked = new Set([0, 1]);
+const ingEl = document.getElementById("ing"), resList = document.getElementById("resList"), resTitle = document.getElementById("resTitle");
+const tS = document.getElementById("tSweet"), tA = document.getElementById("tSalty");
+function renderIng(){
+  const names = ING[kind][lang];
+  ingEl.innerHTML = "";
+  names.forEach((x, i) => {
+    const b = document.createElement("button"); b.type = "button"; b.className = "chip"; b.textContent = x;
+    b.setAttribute("aria-pressed", String(picked.has(i)));
+    b.addEventListener("click", () => { picked.has(i) ? picked.delete(i) : picked.add(i); renderIng(); });
+    ingEl.appendChild(b);
+  });
+  resTitle.textContent = kind === "sweet" ? t("resSweet") : t("resSalty");
+  resList.textContent = picked.size ? [...picked].sort((a, b) => a - b).map(i => names[i]).join(", ") : t("resEmpty");
+}
+function setKind(k){ kind = k; picked.clear(); tS.setAttribute("aria-pressed", String(k === "sweet")); tA.setAttribute("aria-pressed", String(k === "salty")); renderIng(); }
+tS.addEventListener("click", () => setKind("sweet"));
+tA.addEventListener("click", () => setKind("salty"));
+
+/* hours and open status, Athens time */
+function athensNow(){
+  try{
+    const parts = new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/Athens",weekday:"short",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(new Date());
+    const get = k => parts.find(p => p.type === k).value;
+    return {day:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(get("weekday")), h:+get("hour")};
+  }catch(e){ const d = new Date(); return {day:d.getDay(), h:d.getHours()}; }
+}
+const now = athensNow();
+const isOpen = now.h >= 8 || now.h < 2;
+function renderHours(){
+  document.getElementById("status").classList.toggle("closed", !isOpen);
+  document.getElementById("statusText").textContent = isOpen ? t("openNow") : t("closedNow");
+  const tbl = document.getElementById("hours"); tbl.innerHTML = "";
+  [1,2,3,4,5,6,0].forEach(d => {
+    const tr = document.createElement("tr"); if (d === now.day) tr.className = "today";
+    const a = document.createElement("td"); a.textContent = t("days")[d] + (d === now.day ? t("today") : "");
+    const b = document.createElement("td"); b.textContent = t("hoursRow");
+    tr.append(a, b); tbl.appendChild(tr);
+  });
+}
+
+/* language */
+const sel = document.getElementById("langSel");
+LANGS.forEach(l => { const o = document.createElement("option"); o.value = l; o.textContent = LANG_NAMES[l]; o.lang = l; sel.appendChild(o); });
+function setLang(l, save){
+  lang = l;
+  const root = document.documentElement;
+  root.lang = l; root.dir = l === "he" ? "rtl" : "ltr";
+  document.title = t("title");
+  const md = document.querySelector('meta[name="description"]'); if (md) md.setAttribute("content", t("desc"));
+  document.querySelectorAll("[data-t]").forEach(el => {
+    const v = t(el.dataset.t); if (v == null) return;
+    if (el.hasAttribute("data-html")) el.innerHTML = v; else el.textContent = v;
+  });
+  document.querySelectorAll("[data-ta]").forEach(el => { const [attr, key] = el.dataset.ta.split(":"); el.setAttribute(attr, t(key)); });
+  document.querySelectorAll("[data-p]").forEach(el => { el.textContent = eur(+el.dataset.p); });
+  sel.value = l;
+  renderChips(); renderMenu(); renderIng(); renderHours();
+  if (save){ try{ localStorage.setItem("sousouro-lang", l); }catch(e){} }
+}
+sel.addEventListener("change", () => {
+  const l = sel.value;
+  if (window.LANG_URLS && window.LANG_URLS[l]){ location.href = window.LANG_URLS[l]; return; }
+  setLang(l, true);
+});
+let start = window.PAGE_LANG || "el";
+if (!window.PAGE_LANG){
+  try{ const saved = localStorage.getItem("sousouro-lang"); if (LANGS.includes(saved)) start = saved; }catch(e){}
+}
+setLang(start, false);
+
+/* one copy of the logo in the page */
+const fl = document.querySelector(".foot-logo"), hl = document.querySelector(".logo img");
+if (fl && hl && !fl.getAttribute("src")) fl.src = hl.src;
+
+/* order chooser */
+const dlg = document.getElementById("orderDlg");
+document.querySelectorAll(".js-order").forEach(b => b.addEventListener("click", () => {
+  const take = b.dataset.tab === "take";
+  document.getElementById("optTake").classList.toggle("on", take);
+  document.getElementById("optDel").classList.toggle("on", !take);
+  if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
+}));
+document.getElementById("orderClose").addEventListener("click", () => dlg.close());
+dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+
+/* pitch toggle */
+const pb = document.getElementById("pitchBtn"), pbody = document.getElementById("pitchBody");
+pb.addEventListener("click", () => { const o = pbody.classList.toggle("open"); pb.setAttribute("aria-expanded", String(o)); });
+</script>
+</body>
+</html>

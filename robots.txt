@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kascostas.github.io/sousouro-demo-7f3a/sitemap.xml
